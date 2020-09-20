@@ -25,6 +25,7 @@ end
 
 command.add(nil,{
 	["run:execute"] = function()
+    console.clear()
     execute()
 	end
 })
