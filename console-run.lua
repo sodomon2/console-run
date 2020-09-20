@@ -24,7 +24,7 @@ local function execute()
 end 
 
 command.add(nil,{
-	["run:execute"] = function()
+	["console-run:execute"] = function()
     console.clear()
     execute()
 	end
@@ -32,5 +32,5 @@ command.add(nil,{
 
 keymap.add {
 	["f4"] = "console:toggle",
-	["f5"] = "run:execute",
+	["f5"] = "console-run:execute",
 }
