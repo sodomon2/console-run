@@ -15,8 +15,8 @@ local function execute()
 		cmd = 'sh _FILE'
 	elseif (ext == 'moon') then
 		cmd = 'moon _FILE'
-	elseif (ext == 'moon') then
-		cmd = 'moon _FILE'
+	elseif (ext == 'build') then
+		cmd = 'meson . output'
 	end
     cmd = string.gsub(cmd, '_FILE', filename)
     console.run({
