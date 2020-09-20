@@ -6,28 +6,30 @@ local console  = require "plugins.console"
 local function execute()
     local filename = core.active_view.doc.filename
     local ext = filename:match('%w+$')
-		local cmd = nil
-		if (ext == 'lua') then
-			cmd = 'lua _FILE'
-		elseif (ext == 'py') then
-			cmd = 'python _FILE'
-		elseif (ext == 'sh') then
-			cmd = 'sh _FILE'
-		elseif (ext == 'moon') then
-			cmd = 'moon _FILE'
-		end
-		cmd = string.gsub(cmd, '_FILE', filename)
+	local cmd = nil
+	if (ext == 'lua') then
+		cmd = 'lua _FILE'
+	elseif (ext == 'py') then
+		cmd = 'python _FILE'
+	elseif (ext == 'sh') then
+		cmd = 'sh _FILE'
+	elseif (ext == 'moon') then
+		cmd = 'moon _FILE'
+	elseif (ext == 'moon') then
+		cmd = 'moon _FILE'
+	end
+    cmd = string.gsub(cmd, '_FILE', filename)
     console.run({
-      command = cmd
+	command = cmd
     })
     core.log('Running %s', filename)
 end 
 
 command.add(nil,{
-	["console-run:execute"] = function()
-    console.clear()
-    execute()
-	end
+    ["console-run:execute"] = function()
+      console.clear()
+      execute()
+    end
 })
 
 keymap.add {
