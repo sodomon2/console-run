@@ -19,6 +19,8 @@ local function execute()
 		cmd = 'meson . output'
 	elseif (ext == 'go') then
 		cmd = 'go run _FILE'
+	elseif (ext == 'zig') then
+		cmd = 'zig run _FILE'
 	end
     cmd = string.gsub(cmd, '_FILE', filename)
     console.run({
