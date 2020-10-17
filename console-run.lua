@@ -26,7 +26,7 @@ local function execute()
     console.run({
 	command = cmd
     })
-    core.log('Running %s', filename)
+    core.log(cmd)
 end 
 
 command.add(nil,{
