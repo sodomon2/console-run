@@ -1,14 +1,12 @@
 # console-run
 
-a very simple plugin for [lite-editor](https://github.com/rxi/lite) that facilitates the use of [console](https://github.com/rxi/console)
+A very simple plugin for [lite-editor](https://github.com/rxi/lite) that facilitates the use of the [console plugin](https://github.com/rxi/console)
 
 ## Install
 Navigate to the `data/plugins` folder and run the following command:
 ```bash
-git clone https://github.com/sodomon2/console-run.git
+wget "https://raw.githubusercontent.com/sodomon2/console-run/master/console-run.lua"
 ```
-move `console-run.lua ` to `data/plugins`
 
 ## Dependencies
-
-[console](https://github.com/rxi/console)
+[rxi's console](https://github.com/rxi/console)
