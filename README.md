@@ -9,4 +9,4 @@ wget "https://raw.githubusercontent.com/sodomon2/console-run/master/console-run.
 ```
 
 ## Dependencies
-[rxi's console](https://github.com/rxi/console)
+[rxi's console plugin](https://github.com/rxi/console)
