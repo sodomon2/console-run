@@ -22,7 +22,7 @@ local function execute()
 	elseif (ext == 'zig') then
 		cmd = 'zig run _FILE'
 	end
-    cmd = string.gsub(cmd, '_FILE', filename)
+    cmd = string.gsub(cmd, '_FILE', "\"" .. filename .. "\"")
     console.run({
 	command = cmd
     })
@@ -31,7 +31,6 @@ end
 
 command.add(nil,{
     ["console-run:execute"] = function()
-      console.clear()
       execute()
     end
 })
