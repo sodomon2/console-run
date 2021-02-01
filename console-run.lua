@@ -24,7 +24,8 @@ local function execute()
 	end
     cmd = string.gsub(cmd, '_FILE', "\"" .. filename .. "\"")
     console.run({
-	command = cmd
+        command = cmd,
+        on_complete = function() core.log("exit status: 9") end,
     })
     core.log(cmd)
 end 
